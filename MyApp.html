@@ -5,8 +5,30 @@
     <title>My app</title>
   </head>
   <body ng-controller='myControl'>
+    {{test}}
+    <input type="text" ng-model="test">
+
+    <table>
+      <tr>
+        <td>
+          Name
+        </td>
+        <td>
+          Age
+        </td>
+      </tr>
+      <tr ng-repeat="user in users">
+        <td>
+          {{user.name}}
+        </td>
+        <td>
+          {{user.age}}
+        </td>
+      </tr>
+    </table>
+
     <script src="angular.min.js" charset="utf-8"></script>
     <script src="script.js" charset="utf-8"></script>
-    {{test}}
+
   </body>
 </html>
